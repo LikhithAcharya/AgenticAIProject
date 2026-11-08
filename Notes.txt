@@ -1,0 +1,33 @@
+1) Install node.js
+2) Check node -v & npm -v
+3) Create project folder
+4) Install playwright - npm init playwright@latest
+5) Install playwright mcp 
+    URL - https://github.com/microsoft/playwright-mcp
+    Click on VS Code
+6) Install playwright agents - 
+    URL - https://playwright.dev/docs/test-agents     
+    VS Code terminal - npx playwright init-agents --loop=vscode
+7) Add github copilot in vs Code
+8) We need to add github copilot mcp servers    
+    URL - https://github.com/github/github-mcp-server    
+    VS Code to be added - 
+    {
+  "servers": {
+    "github": {
+      "type": "http",
+      "url": "https://api.githubcopilot.com/mcp/",
+      "headers": {
+        "Authorization": "Bearer ${input:github_mcp_pat}"
+      }
+    }
+  },
+  "inputs": [
+    {
+      "type": "promptString",
+      "id": "github_mcp_pat",
+      "description": "GitHub Personal Access Token",
+      "password": true
+    }
+  ]
+}
